@@ -4,7 +4,7 @@ function StepCounter({ setStepLen, stepLen }) {
     setStepLen((stepLen) => stepLen + amount);
   };
   return (
-    <div>
+    <div className="step--counter">
       <button onClick={() => handler(-1)}>-</button>
       <p>Step: {stepLen}</p>
       <button onClick={() => handler(1)}>+</button>

@@ -1,0 +1,5 @@
+.step--counter {
+  display: flex;
+  column-gap: 1em;
+  align-items: center;
+}
