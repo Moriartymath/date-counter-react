@@ -7,7 +7,12 @@ function DateCounter({ setCount, stepLen, count }) {
   return (
     <div className="date--counter">
       <button onClick={() => handler(-1)}>-</button>
-      <p>Count: {count}</p>
+      <input
+        type="number"
+        className="input--number"
+        value={count}
+        onChange={(ev) => setCount(+ev.target.value)}
+      ></input>
       <button onClick={() => handler(1)}>+</button>
     </div>
   );

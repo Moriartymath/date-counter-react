@@ -1,13 +1,17 @@
 import "./StepCounter.css";
 function StepCounter({ setStepLen, stepLen }) {
-  const handler = function (amount) {
-    setStepLen((stepLen) => stepLen + amount);
-  };
   return (
     <div className="step--counter">
-      <button onClick={() => handler(-1)}>-</button>
-      <p>Step: {stepLen}</p>
-      <button onClick={() => handler(1)}>+</button>
+      <input
+        type="range"
+        max={10}
+        min={0}
+        value={stepLen}
+        onChange={(ev) => {
+          setStepLen(+ev.target.value);
+        }}
+      ></input>
+      <span>{stepLen}</span>
     </div>
   );
 }

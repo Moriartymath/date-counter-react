@@ -3,3 +3,8 @@
   column-gap: 1em;
   align-items: center;
 }
+
+.input--number::-webkit-inner-spin-button,
+.input--number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
